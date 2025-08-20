@@ -1,0 +1,12 @@
+# VS Code - Configuraciones personales (no compartir)
+.vscode/launch.json
+.vscode/argv.json
+.vscode/settings.json.backup*
+.vscode/ipch/
+.vscode/.ropeproject/
+
+# Solo si quieres evitar conflictos de settings entre devs
+# .vscode/settings.json
+
+# Archivos temporales de workspace
+*.code-workspace.backup*
