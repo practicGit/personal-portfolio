@@ -1,7 +1,5 @@
 {
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "next/dist/**"
-  ],
+  "typescript.preferences.autoImportFileExcludePatterns": ["next/dist/**"],
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
@@ -39,5 +37,9 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell"
+  },
+  "editor.linkedEditing": true
 }

@@ -1,0 +1,26 @@
+/* 1. Un pequeño "reset" para consistencia entre navegadores */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Variables de CSS para colores y fuentes (buena práctica) */
+:root {
+    --color-primario: #0A192F;
+    --color-secundario: #64FFDA;
+    --color-texto: #CCD6F6;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 3. Estilos base para el cuerpo del documento */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+
+
+

@@ -27,7 +27,8 @@
       "**/CVS": true,
       "**/.DS_Store": true,
       "**/Thumbs.db": true
-    }
+    },
+    "editor.linkedEditing": true
   },
   "extensions": {
     "recommendations": [
