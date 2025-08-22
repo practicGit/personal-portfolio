@@ -1,19 +1,19 @@
-/* 1. Un pequeño "reset" para consistencia entre navegadores */
+/* 1. --- Un pequeño "reset" para consistencia entre navegadores ---  */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* 2. Variables de CSS para colores y fuentes (buena práctica) */
+/* 2. --- Variables de CSS para colores y fuentes (buena práctica) --- */
 :root {
-    --color-primario: #0A192F;
-    --color-secundario: #64FFDA;
-    --color-texto: #CCD6F6;
+    --color-primario: #1a1414;
+    --color-secundario: #fafffd;
+    --color-texto: #ffffff;
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 3. Estilos base para el cuerpo del documento */
+/* 3. --- Estilos base para el cuerpo del documento --- */
 body {
     font-family: var(--fuente-principal);
     background-color: var(--color-primario);
@@ -21,6 +21,64 @@ body {
     line-height: 1.6;
 }
 
+/* --- 4. Estilos de Navegacion --- */
+header {
+  padding: 1rem 2rem; /* Espacio interno para que no este pegado a los bordes */
+}
+nav{
+    display: flex; /* Aqui se activa flexbox */
+    justify-content: flex-end; /* Alinea los elementos al final (Derecha) del contenedor*/
+    gap:10px;/* Crea un Espacio cosistente entre los enlaces de navegación */
+}
 
+nav a {
+    color: var(--color-secundario); /* Usamos nuestras variables */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
+    font-weight: 500; /* Peso de fuente para destacar */
 
+} 
 
+/* 5. --- Efectos visual al pasar el mouse sobre los enlaces de navegación --- */
+nav a:hover {
+    color: var(--color-texto); /* Cambia el color al pasar el mouse */
+   transform: translateY(-2px); /* Efecto de desplazamiento hacia arriba */
+    transition: all 0.2s ease-in-out; /* Transición suave */
+}
+/* 6. --- Estilos de layout Principal y Secciones --- */
+main {
+  /*--- Usaremos Flexbox para centrar todo el contenido verticalmente en la pagina --- */
+  display: flex;
+  flex-direction: column; /* Alinea las secciones en una columna (una encima de la otra) */
+  align-items: center; /* Centra horizontalmente las secciones*/
+    padding: 2rem; /* Espacio interno para el contenido principal */
+}
+
+section {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 900px; /* Ancho máximo para evitar que se estire demasiado en pantallas grandes */
+    margin: 2rem 0; /* Espacio entre secciones */
+    min-height: 800vh; /*Cada sección ocupa al menos el 80% de la altura de la pantalla  */
+
+    /* Centramos el contenido DENTRO de cada sección  */
+    display:flex;
+    flex-direction: column; /* Alinea el contenido en una columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Alinea el texto al centro */
+
+}
+
+/* --- Estilos para la sección de Proyectos, que usará Grid   --- */
+#proyectos {
+  /* --- Sección  para las tarjetas de proyectos --- */
+}
+
+footer {
+    text-align: center; /* Centra el texto del pie de página */
+    padding: 1rem; /* Espacio interno */
+    background-color: var(--color-primario); /* Fondo oscuro */
+    color: var(--color-secundario); /* Texto claro */
+    border-top: 1px solid var(--color-secundario); /* Línea superior para separar del contenido */
+    margin-top: 2rem; /* Espacio superior para separar del contenido */
+}
