@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;/* Permite un desplazamiento suave al hacer clic en enlaces de anclaje */
+}
+
 /* 2. --- Variables de CSS para colores y fuentes (buena práctica) --- */
 :root {
     --color-primario: #1a1414;
@@ -72,6 +76,31 @@ section {
 /* --- Estilos para la sección de Proyectos, que usará Grid   --- */
 #proyectos {
   /* --- Sección  para las tarjetas de proyectos --- */
+  
+.galeria-proyectos {
+    display: grid; /* ¡La magia en dos dimensiones empieza aquí! */
+    
+    /* Esta es la línea de código clave para el responsive sin media queries */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    gap: 2rem; /* El espacio entre cada proyecto */
+    width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+    padding-top: 2rem;
+}
+
+.tarjeta-proyecto {
+    /* Estilos para que las tarjetas se vean bien */
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-proyecto h3 {
+    color: var(--color-secundario);
+    margin-bottom: 0.5rem;
+}
 }
 
 footer {
